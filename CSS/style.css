@@ -1,0 +1,319 @@
+/*######## CSS RESET ######## */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+@font-face{
+	font-family: proxima;
+	src:url('../fonts/ProximaNova-Regular.woff') format("woff"),
+	url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face{
+	font-family: roboto;
+	src:url('../fonts/Roboto-Regular.woff') format("woff"),
+	url('../fonts/Robotos-Regular.ttf') format('truetype');
+}
+.body{
+	font-size: 16px;
+	color: #000;
+}
+.wrapper{
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+/*########### HEADER ########## */
+.page-header{
+	height: 66px;
+	width: 100%;
+	background: #f7c61d;
+}
+.page-header .wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.page-header nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+.page-header a{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: proxima;
+	color: inherit;
+}
+.left-menu{
+	width: 308px;
+}
+.right-menu{
+	width: 347px;
+}
+/*########### MAIN ########## */
+
+.main>.wrapper{
+	display: flex;
+}
+main{
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+.articles{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.main article{
+	display: flex;
+	margin-bottom: 65px;
+}
+.article-left img{
+	border-radius: 3px;
+}
+.article-right{
+	padding-left: 27px ;
+}
+.article-right h3{
+	font-family: proxima;
+	font-weight: 300;
+	font-size: 30px;
+}
+.meta {
+	font-family: roboto;
+	font-weight: 300;
+	font-size: 13px;
+	margin: 20px 0;
+}
+.meta span::after , .views::after{
+	display: inline-block;
+	content:'|';
+	font-size: 13px;
+	color: #999;
+	margin-left: 6px;
+	margin-right: 6px;
+
+}
+.meta span:last-child::after{
+	display: none;
+}
+main h2{
+	margin-top: 40px;
+	margin-bottom: 15px;
+	font-size: 24px;
+	font-family: proxima;
+	font-weight: bold;
+}
+.category{
+	color: #e3b002;
+}
+.description{
+	font-family: roboto;
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 18px;
+}
+.views{
+	font-size: 13px;
+	color: #999;
+}
+.comments-sign{
+	font-size: 13px;
+	color: #999;
+}
+.comment{
+	color: #edb907;
+	font-size: 13px;
+}
+.more{
+	display: block;
+	width: 170px;
+	height: 42px;
+	padding: 17px 32px;
+	box-sizing: border-box;
+	text-align: center;
+	border: 1px solid #f7cb33;
+	margin-left: 360px;
+	margin-bottom: 83px;
+}
+.more a{
+	font-size: 12px;
+	font-family: roboto;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+}
+.sidebar{
+	padding-top: 78px;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+.searchbox{
+	width: 100%;
+	position: relative;
+}
+.searchbox label{
+	position: absolute;
+	left: 10px;
+	top:8px;
+	z-index: 100;
+
+}
+.searchbox input{
+	display: block;
+	width: 100%;
+	height: 28px;
+	border-radius: 20px;
+	border: 1px solid #e5e5e5;
+	outline: none;
+	padding: 8px 10px 8px 30px;
+	box-sizing: border-box;
+	font-family: roboto;
+	font-size: 14px;
+}
+.calendar-widget{
+	width: 100%;
+	margin-top: 38px;
+}
+.calendar-top{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid #e5e5e5;
+	height: 40px;
+	border-radius: 10px 10px 0 0;
+}
+.month{
+	font-size: 16px;
+	font-family: proxima;
+}
+.prev , .next{
+	color: #e5e5e5;
+}
+table{
+	width: 100%;
+}
+th{
+	height: 27px;
+	background: #e7e7e7;
+	text-align: center;
+	vertical-align: middle;
+	color:#888;
+}
+td{
+	height: 33px;
+	border: 1px solid #e7e7e7;
+	color: #4d4d4d;
+	text-align: center;
+	vertical-align: middle;
+}
+table tr:last-child td:first-child{
+	border-radius: 0 0 0 10px;
+}
+table tr:last-child td:last-child{
+	border-radius: 0 0 10px 0;
+}
+.not-current-month{
+	color: #dadada;
+}
+.current-day{
+	background: #f7c61d;
+	color: #fff;
+}
+.popular-news{
+	width: 100%;
+}
+.popular-news article{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.popular-news h2{
+	margin-bottom: 26px;
+	margin-top: 45px;
+	font-family: proxima;
+	font-weight: bold;
+	font-size: 18px;
+}
+.popular-news .date{
+	font-family: roboto;
+	font-size: 12px;
+	color: #999;
+}
+.popular-news h3{
+	font-family: roboto;
+	font-size: 16px;
+}
+/*########### FOOTER ########## */
+.page-footer {
+	height: 63px ;
+	background: #f7c61d
+}
+.page-footer .wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.copy{
+	font-family: proxima;
+	font-size: 13px;
+	font-weight: 300;
+}
+.page-footer nav ul{
+	display: flex;
+	width: 298px;
+	justify-content: space-between;
+	font-family: roboto;
+	font-size: 14px;
+	color: inherit;
+}
+.social a{
+	display: block;
+	background: #fff;
+	color: #f7c61d;
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+	line-height: 44px;
+	text-align: center;
+}
+.social li{
+	display: inline-block;
+}
